@@ -1,0 +1,74 @@
+.container {
+  @extend %container;
+}
+.benefits {
+  @extend %section;
+}
+
+.benefits__title {
+  @extend %visually-hidden;
+}
+
+.benefits__list {
+  @extend %list;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.benefits__item {
+  width: 100%;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    max-width: 100%;
+    height: 120px;
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--grey-background);
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(1):before {
+    background-image: url(../images/Иконки/antenna.svg);
+  }
+  &:nth-child(2):before {
+    background-image: url(../images/Иконки/clock.svg);
+  }
+  &:nth-child(3):before {
+    background-image: url(../images/Иконки/diagram.svg);
+  }
+  &:nth-child(4):before {
+    background-image: url(../images/Иконки/astronaut.svg);
+  }
+}
+
+.benefits__feature {
+  margin-bottom: 10px;
+  @include font(700, 14px, 1.14);
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.benefits__text {
+  color: var(--secondery-text-color);
+  @include font(400, 14px, 1.71);
+}

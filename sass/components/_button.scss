@@ -1,0 +1,11 @@
+.button {
+  color: var(--text-on-dark-background);
+  background-color: var(--text-logo-one);
+  min-width: 200px;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include font(700, 16px, 1.87);
+  cursor: pointer;
+}

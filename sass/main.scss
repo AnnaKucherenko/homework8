@@ -1,0 +1,16 @@
+@import "./utils/variables";
+@import "./base/reset";
+@import "./utils/bodystyles";
+@import "./utils/placeholders";
+@import "./utils/mixin";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/modal";
+@import "./layout/benefits";
+@import "./layout/occupation";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+
+@import "./layout/portfolio";

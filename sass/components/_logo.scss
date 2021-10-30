@@ -1,0 +1,29 @@
+.logo {
+  @extend %link;
+  color: var(--text-logo-two);
+  font-family: "Raleway", sans-serif;
+  @include font(700, 26px);
+}
+
+.logo--right {
+  @media screen and(min-width:768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and(min-width:1200px) {
+    margin-right: 93px;
+  }
+}
+
+.logo__span {
+  color: var(--text-logo-one);
+}
+
+.logo--wight-color {
+  color: var(--text-logo-three);
+}
+
+.logo--margin {
+  display: block;
+  margin-bottom: 20px;
+}
