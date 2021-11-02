@@ -39,7 +39,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -52,6 +52,7 @@ img {
 }
 
 .header__container--flex, .container, .container--flex {
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -383,6 +384,7 @@ img {
 }
 
 .mobile-menu {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -460,12 +462,18 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px;
+  }
+}
+
 .hero--background {
   max-width: 1600px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-img.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-mobile.jpg");
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
   background-size: cover;
@@ -473,9 +481,34 @@ img {
   border: 1px solid #000000;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero--background {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-mobile-2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero--background {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero--background {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-tablet-2x.jpg");
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero--background {
     height: 600px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-img.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero--background {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Главная_страница/hero-img-2x.jpg");
   }
 }
 
@@ -1388,6 +1421,7 @@ img {
 
 .products__link {
   display: block;
+  height: 100%;
 }
 
 .products__link:hover, .products__link:focus {
@@ -1399,14 +1433,9 @@ img {
   overflow: hidden;
 }
 
-.products__img {
-  width: 100%;
-  height: 294px;
-}
-
 .products__description {
   position: absolute;
-  top: 294px;
+  top: 100%;
   right: 0;
   height: 100%;
   padding: 63px 24px;
@@ -1429,12 +1458,7 @@ img {
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .products__card:nth-child(1) .products__meta {
-    padding-bottom: 56px;
-  }
+  flex-grow: 1;
 }
 
 .products__name {

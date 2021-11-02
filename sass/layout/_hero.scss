@@ -1,5 +1,8 @@
 .hero {
   padding: 118px 60px;
+  @media screen and (min-width: 1200px) {
+    padding: 200px;
+  }
   margin: 0 auto;
   background-color: var(--hero-background);
   text-align: center;
@@ -8,24 +11,70 @@
 .hero--background {
   max-width: 1600px;
   height: 400px;
-  // height: 600px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../images/Главная_страница/hero-img.jpg");
+    url("../images/Главная_страница/hero-mobile.jpg");
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("../images/Главная_страница/hero-mobile-2x.jpg");
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("../images/Главная_страница/hero-tablet.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("../images/Главная_страница/hero-tablet-2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("../images/Главная_страница/hero-img.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("../images/Главная_страница/hero-img-2x.jpg");
+    }
+  }
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border: 1px solid #000000;
-
-  @media screen and (min-width: 1200px) {
-    height: 600px;
-  }
 }
 
 .hero__title {
