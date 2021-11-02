@@ -132,6 +132,20 @@
   }
 }
 
+.header-contakt__icon--mail-small {
+  @media screen and(max-width:1199px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.header-contakt__icon--tel-small {
+  @media screen and(max-width:1199px) {
+    width: 10px;
+    height: 14px;
+  }
+}
+
 // Выпадающее меню
 
 .header__menu {
@@ -176,7 +190,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 48px 40px;
   background-color: var(--header-background);
   z-index: 99999;
@@ -193,9 +207,15 @@
   transform: translateX(0);
 }
 
-.mobile-menu__navigation {
-  margin-bottom: 302px;
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+// .mobile-menu__navigation {
+//   margin-bottom: 302px;
+// }
 
 .mobile-menu__contacts {
   margin-bottom: 64px;
