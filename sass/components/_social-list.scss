@@ -39,3 +39,11 @@
     fill: var(--text-on-dark-background);
   }
 }
+
+.social-networks__icon--white {
+  fill: var(--text-on-dark-background);
+  .social-networks__link:hover &,
+  .social-networks__link:focus & {
+    fill: var(--text-on-dark-background);
+  }
+}
