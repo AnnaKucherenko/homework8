@@ -124,7 +124,9 @@
   top: 100%;
   right: 0;
   height: 100%;
-  padding: 63px 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
   @include font(400, 18px, 1.56);
   opacity: 1;
   transform: translateY(0px);
@@ -133,7 +135,7 @@
   background-color: rgba(33, 150, 243, 0.9);
   .products__link:hover &,
   .products__link:focus & {
-    transform: translateY(-294px);
+    transform: translateY(-100%);
   }
 }
 
